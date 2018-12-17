@@ -1,0 +1,31 @@
+<mat-dialog-content align="end">
+    <button mat-icon-button mat-dialog-close><mat-icon>close</mat-icon></button>
+</mat-dialog-content>
+
+<mat-dialog-content class="conteneur">
+  <div class="left-block">
+    <h2 mat-dialog-title>Nom : {{ alternant.nom }}</h2>
+    <h2 mat-dialog-title>Prénom : {{ alternant.prenom }}</h2>
+    <h2 mat-dialog-title>N° de Sécurité Sociale : {{ alternant.numSS }}</h2>
+    <h2 mat-dialog-title>N° INE : {{ alternant.INE }}</h2>
+
+    <h2 mat-dialog-title>Né(e) le : {{ alternant.dateNaissance }}</h2>
+    <h2 mat-dialog-title>Ville de naissance : {{ alternant.villeNaissance }}</h2>
+    <h2 mat-dialog-title>Nationalité : {{ alternant.nationalite }}</h2>
+  
+    <h2 mat-dialog-title>Adresse : {{ alternant.adresse }} {{ alternant.codePostal }} {{ alternant.ville }}</h2>
+    <h2 mat-dialog-title>Téléphone : {{ alternant.tel }}</h2>
+    <h2 mat-dialog-title>Adresse mail : {{ alternant.mail }}</h2>
+  </div>
+  <div class="right-block">
+    <img src="../../assets/img/profil.png">
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>Précédent</button>
+  <span class="example-fill-remaining-space"></span>
+  <button mat-raised-button mat-dialog-close>Valider les modifications</button>
+  <span class="example-fill-remaining-space"></span>
+  <button mat-raised-button [mat-dialog-close]="true">Suivant</button>
+</mat-dialog-actions>
